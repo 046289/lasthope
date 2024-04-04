@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me, Myself, and I</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+section {
+    min-height: 100vh;
+    margin-top: 90px;
+    background: linear-gradient(to right, #164A41, #4D774E);
+    display: flex;
+}
+
+aside {
+    flex: 1;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #013220;
+    width: 25%; /* Default width for aside */
+}
+
+.section-image {
+    width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 3px;
+    background-color: #FFBA00;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    border-radius: 50%; 
+	margin-left: 25%;
+}
+
+main {
+    flex: 2; /* Default width for main */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to right,  #164A41, #86a96f);
+}
+
+
+
+@media (min-width: 768px) {
+    aside {
+        width: 20%; 
+    }
+
+    main {
+        flex: 3; 
+    }
+    .section-image {
+        width: 50%;
+        height: auto;
+        margin-left: 25%;
+    }
+}
+
+#slider-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 95%;
+    height: auto;
+    border: 1px solid #ddd;
+    align-items: center;
+}
+
+#dots-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dot {
+    height: 5px;
+    width: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.active-dot {
+    background-color: green;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="image/me.png" alt="Profile Image" class="profile-image">
+        <h1>Self Introduction</h1>
+    </header>
+ 
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="narrative.html">Narrative</a>
+        <a href="aboutme.html">About me</a>
+        <a href="information.html">Information</a>
+    </nav>
+
+    <section id="home">
+        <aside>
+            <img src="image/home.jpg" alt="Profile Image" class="section-image" class="center-image">
+            
+            <h2>Jeff Axel P. Orig</h2>
+            
+            <hr></hr>
+            
+            <p style="text-align: justify; text-indent: 20px;">Thank you for visiting my website, Hope you'll have a time to knowing me and in return may we meet in the future.</p>
+            <hr></hr>
+
+            <article>
+                <h2><b>The Importance of Computer Engineering in Today's Society</b></h2>
+                    
+                    <div id="slider-container">
+        <div id="slider">
+            <div class="slide"><img src="image/first.jpeg" alt="Slide 1"></div>
+            <div class="slide"><img src="image/second.jpeg" alt="Slide 2"></div>
+            <div class="slide"><img src="image/third.jpeg" alt="Slide 3"></div>
+            <!-- Add more slides as needed -->
+        </div>
+
+        <div id="dots-container"></div>
+    </div>
+
+    <script>
+        const slider = document.getElementById('slider');
+        const dotsContainer = document.getElementById('dots-container');
+        let slideIndex = 0;
+
+        function nextSlide() {
+            slideIndex = (slideIndex + 1) % slider.children.length;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            slideIndex = (slideIndex - 1 + slider.children.length) % slider.children.length;
+            updateSlider();
+        }
+
+        function updateSlider() {
+            slider.style.transform = `translateX(${-slideIndex * 100}%)`;
+            updateDots();
+        }
+
+        function updateDots() {
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active-dot', index === slideIndex);
+            });
+        }
+
+        // Create dots based on the number of slides
+        for (let i = 0; i < slider.children.length; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            dot.addEventListener('click', () => {
+                slideIndex = i;
+                updateSlider();
+            });
+            dotsContainer.appendChild(dot);
+        }
+
+        // Auto slide every 3 seconds (adjust as needed)
+        setInterval(nextSlide, 3000);
+    </script>    
+    
+                <h4>What is computer engineering?</h4>
+                <p style="text-align: justify; text-indent: 20px;">Computer engineering is an immensely dynamic and multifaceted domain that ingeniously merges fundamental tenets of computer science and electrical engineering to conceptualize and actualize cutting-edge computer systems meticulously. This encompasses an extensive <s>gamot</s> of tasks, from the intricate design of computer hardware and software to the ingenious development of complex networks and communication frameworks. Computer engineers ardently dedicate themselves to a vast array of projects, ranging from <del>from</del> the creation of pioneering computer technologies to the relentless enhancement of existing systems.</p>
+            </article>
+            
+            <p style="text-align: right;"><small><cite>Source:<a href="https://www.fieldengineer.com/article/the-importance-of-computer-engineering-in-todays-society/" style="color: #FFFFFF;">Field Engineer</a></cite></small></p>
+            
+            <hr></hr>
+         <small>
+            <address>
+            <p>Orig, Jeff Axel P.<br>Pamaong Stanai Rd., Brgy. Cogon<br>Tagbilaran City, 6300</p>
+        </address>   
+        </small>
+        </aside>
+        
+        <main>
+            <h2>Welcome to my page</h2>
+            <hr></hr>
+            <p>This is a brief introduction to my personal website. Feel free to explore!</p>
+
+<figure>
+            <embed src="image/cat.jpg" type="image/jpg" width="610" height="680" controls>
+
+<figcaption>                
+    <small>
+            This photo was generated by ai feel to visit their site.<br>
+            <sub>
+                <cite>Source: 
+                    <a href="https://www.freepik.com/premium-ai-image/cute-domestic-cat-staring-camera-generative-ai_63002425.htm" style="color: black;">Freepik</a>
+                </cite>
+            </sub>
+    </small>
+</figcaption>
+</figure>
+            
+            <article>
+                <h3>Fun Facts About Cats</h3>
+                
+                <hr></hr>
+                
+                <quote><p style="text-align: justify;"><dfn>Cats can dream</dfn>, just like people do. They have a fascinating ability to enter a dream state during their sleep.</p></quote>
+                
+                <p style="text-align: right;"><cite><sub>Source: <a href="https://petpros.net/15-fun-facts-about-cats/" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF;">Pet Pros</a></sub></cite></p>
+                
+            
+            <p style="text-align: justify; text-indent: 20px;">Like cats <i>dreaming</i>, I also have big dreams. Just as they nap with <b>visions</b>, I envision myself as a <em>successful</em> person one day. In the world of <i>computer engineering</i>, I'm working hard to turn those dreams into reality. It's like solving puzzles and building cool stuff with technology, paving my way to a bright future.</p>
+            
+            <hr></hr>
+            
+            <!-- Example of using abbr for abbreviation with title -->
+            <p><abbr title="Bachelor of Science">BSCOMPe</abbr> in Computer Engineering</p>
+            
+        </main>
+    </section>
+
+    <footer>
+        <mark>Home</mark>
+    </footer>
+
+</body>
+</html>
+
+</html>
