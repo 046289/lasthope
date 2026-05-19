@@ -1,254 +1,1531 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Me, Myself, and I</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="images/TabIcon.png" type="image">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="styles.css">
+        <title>Portfolio</title>
+    </head>
+    <body>
+        <!----------NAVBAR---------->
+        <header>
+            <div class="logo-bar">
+                <a href="#" class="logo">Portfolio</a>
+                <input type="checkbox" id="check" style="display: none;">
+                <label for="check" class="open-menu" id="burgerMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </header>
 
-section {
-    min-height: 100vh;
-    margin-top: 90px;
-    background: linear-gradient(to right, #164A41, #4D774E);
-    display: flex;
-}
+        <!----------BODY---------->
+        <section class="panel" id="home">
+            <!----------HOME---------->
+            <div class="home1">
+                <div class="home2">
+                    <div class="intro">
+                        <span class="subheading">Hello!</span>
+                        <h1>I'm <span>Jeff Axel Orig</span></h1>
+                        <h2>A Computer Engineering Stundent</h2>
+                        <p><a href="#projects">My Work</a> <a href="#resume">Resume</a></p>
+                        <div class="media">
+                            <a href="https://web.facebook.com/jeffaxel.orig/" target="_blank" class="icons"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="https://www.instagram.com/jeffaxelorig" target="_blank" class="icons"><i class="fa-brands fa-square-instagram"></i></a>
+                            <a href="tel:09816000811" target="_blank" class="icons"><i class="fa-solid fa-phone"></i></a>
+                            <a href="https://www.youtube.com/@Foliage026" target="_blank" class="icons"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="home3">
+                    <img src="images/home.jpg" height="100%">
+                </div>
+            </div>
+        </section>
+        
+        <!----------ABOUT---------->
+        <section class="panel" id="about">
+            <div class="about1">
+                <div class="about2" style="background-image: url(images/home.jpg);">
+                </div>
+                <div class="about3">
+                    <h2 class="pre-title">About Me</h2>
+                    <p class="pre-context">Computer Engineering student interested in software development, web technologies, and embedded systems. I enjoy building academic and personal projects that combine software and hardware to create practical solutions.</p>
+					<ul class="about-info">
+                        <li class="info-list"><span>Name:</span> <span>Jeff Axel P. Orig</span></li>
+                        <li class="info-list"><span>Date of birth:</span> <span>June 26, 2005</span></li>
+                        <li class="info-list"><span>Address:</span> <span>Pamaong Stanai, Bryg. Cogon, Tagbilaran City</span></li>
+                        <li class="info-list"><span>Zip code:</span><span>6300</span></li>
+                        <li class="info-list"><span>Email:</span> <span>axeljep26@gmail.com</span></li>
+                        <li class="info-list"><span>Phone: </span> <span>+63-981-600-0811</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+		<section class="panel" id="skills">
+			<h1 class="pre-title">Skills</h1>
 
-aside {
-    flex: 1;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: #013220;
-    width: 25%; /* Default width for aside */
-}
+			<p class="pre-context">
+				Skills and project areas I am currently learning and improving
+				through school and personal projects
+			</p>
 
-.section-image {
-    width: 50%;
-    height: auto;
-    margin-bottom: 20px;
-    padding: 3px;
-    background-color: #FFBA00;
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
-    border-radius: 50%; 
-	margin-left: 25%;
-}
+			<div class="skills-wrapper">
+				<div class="skills-container">
 
-main {
-    flex: 2; /* Default width for main */
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to right,  #164A41, #86a96f);
-}
+					<!-- Web Design -->
+					<div class="skill-card">
+						<div class="skill-icon">
+							<i class="fa-solid fa-pen-ruler"></i>
+						</div>
 
+						<h3 class="skill-title">Web Design</h3>
 
+						<p class="skill-description">
+							Creating simple and clean website layouts that are easy
+							to use and responsive on different devices.
+						</p>
 
-@media (min-width: 768px) {
-    aside {
-        width: 20%; 
-    }
+						<ul class="skill-features">
+							<li>Basic responsive layouts</li>
+							<li>Simple UI design</li>
+							<li>Clean page structure</li>
+						</ul>
 
-    main {
-        flex: 3; 
-    }
-    .section-image {
-        width: 50%;
-        height: auto;
-        margin-left: 25%;
-    }
-}
+						<a href="#" class="skill-link">
+							<span>Learn More</span>
+							<i class="fas fa-arrow-right"></i>
+						</a>
+					</div>
 
-#slider-container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-}
+					<!-- Web Development -->
+					<div class="skill-card">
+						<div class="skill-icon">
+							<i class="fa-solid fa-gears"></i>
+						</div>
 
-#slider {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
+						<h3 class="skill-title">Web Development</h3>
 
-.slide {
-    min-width: 100%;
-    overflow: hidden;
-}
+						<p class="skill-description">
+							Building simple websites using HTML, CSS, and JavaScript
+							for school projects and practice.
+						</p>
 
-.slide img {
-    width: 95%;
-    height: auto;
-    border: 1px solid #ddd;
-    align-items: center;
-}
+						<ul class="skill-features">
+							<li>Frontend development</li>
+							<li>Interactive pages</li>
+							<li>Responsive design</li>
+						</ul>
 
-#dots-container {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-}
+						<a href="#" class="skill-link">
+							<span>Learn More</span>
+							<i class="fas fa-arrow-right"></i>
+						</a>
+					</div>
 
-.dot {
-    height: 5px;
-    width: 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-}
+					<!-- App Development -->
+					<div class="skill-card">
+						<div class="skill-icon">
+							<i class="fa-solid fa-mobile-screen"></i>
+						</div>
 
-.active-dot {
-    background-color: green;
-}
+						<h3 class="skill-title">Mobile App Development (Learning)</h3>
 
-    </style>
-</head>
-<body>
-    <header>
-        <img src="image/me.png" alt="Profile Image" class="profile-image">
-        <h1>Self Introduction</h1>
-    </header>
- 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="narrative.html">Narrative</a>
-        <a href="aboutme.html">About me</a>
-        <a href="information.html">Information</a>
-    </nav>
+						<p class="skill-description">
+							Making simple mobile apps using MIT App Inventor for
+							school projects and practice.
+						</p>
 
-    <section id="home">
-        <aside>
-            <img src="image/home.jpg" alt="Profile Image" class="section-image" class="center-image">
+						<ul class="skill-features">
+							<li>MIT App Inventor</li>
+							<li>Basic mobile apps</li>
+							<li>Simple app logic</li>
+						</ul>
+
+						<a href="#" class="skill-link">
+							<span>Learn More</span>
+							<i class="fas fa-arrow-right"></i>
+						</a>
+					</div>
+
+				</div>
+
+				<div class="skills-cta">
+					<p>Interested in collaborating on school or personal projects?</p>
+					<a href="#contact" class="cta-button">Get in Touch</a>
+				</div>
+			</div>
+		</section>
+			   
+		<!------RESUME------->
+		<section class="panel" id="resume">
+			<h1 class="pre-title">Resume</h1>
+			<p class="pre-context">
+				Computer Engineering student with experience in software development,
+				web technologies, embedded systems, and project-based system design.
+			</p>
+
+			<div class="resume-tabs">
+				<button class="resume-tab active" data-tab="experience">Experience</button>
+				<button class="resume-tab" data-tab="education">Education</button>
+			</div>
+
+			<div class="resume-container">
+				<div class="resume-content">
+
+					<!-- Experience Tab Content -->
+					<div class="tab-content active" id="experience-content">
+						<div class="res-container">
+
+							<!-- Card -->
+							<div class="resume-column">
+								<div class="res-box">
+									<div class="res-box-header">
+										<span class="date">2024 - Present</span>
+										<h2>Software & Web Development</h2>
+										<span class="position">Academic & Personal Projects</span>
+									</div>
+
+									<p class="content">
+										Developing web applications and software-based systems
+										using programming languages and modern web technologies.
+									</p>
+
+									<div class="res-box-footer">
+										<span class="res-tag">Java</span>
+										<span class="res-tag">Python</span>
+										<span class="res-tag">JavaScript</span>
+									</div>
+								</div>
+							</div>
+
+							<!-- Card -->
+							<div class="resume-column">
+								<div class="res-box">
+									<div class="res-box-header">
+										<span class="date">2024 - Present</span>
+										<h2>Embedded & PCB Systems</h2>
+										<span class="position">Computer Engineering Projects</span>
+									</div>
+
+									<p class="content">
+										Building embedded and PCB-based projects involving
+										digital logic circuits, sensors, and hardware integration.
+									</p>
+
+									<div class="res-box-footer">
+										<span class="res-tag">PCB Design</span>
+										<span class="res-tag">IoT</span>
+										<span class="res-tag">Embedded Systems</span>
+									</div>
+								</div>
+							</div>
+
+							<!-- Card -->
+							<div class="resume-column">
+								<div class="res-box">
+									<div class="res-box-header">
+										<span class="date">2025</span>
+										<h2>UI/UX Designer</h2>
+										<span class="position">EvLaunch 2 Attendance System</span>
+									</div>
+
+									<p class="content">
+										Designed and improved the user interface of the
+										EvLaunch 2 Attendance System to enhance navigation,
+										usability, and overall user experience.
+									</p>
+
+									<div class="res-box-footer">
+										<span class="res-tag">UI/UX Design</span>
+										<span class="res-tag">Figma</span>
+										<span class="res-tag">User Interface</span>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<!-- Education Tab Content -->
+					<div class="tab-content" id="education-content">
+						<div class="res-container">
+
+							<div class="column1">
+								<div class="res-box">
+									<div class="res-box-header">
+										<span class="date">2023-Present</span>
+										<h2>Web Development Enthusiast</h2>
+										<span class="position">Self-Learning</span>
+									</div>
+
+									<p class="content">
+										Interested in web development and keeps learning by
+										building small projects and practicing coding.
+									</p>
+
+									<div class="res-box-footer">
+										<span class="res-tag">Web Apps</span>
+										<span class="res-tag">UI Design</span>
+										<span class="res-tag">JavaScript</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="column2">
+								<div class="res-box">
+									<div class="res-box-header">
+										<span class="date">2023-Present</span>
+										<h2>Academic Project Developer</h2>
+										<span class="position">Computer Engineering Projects</span>
+									</div>
+
+									<p class="content">
+										Builds school projects like simple web apps and basic
+										mobile apps using MIT App Inventor.
+									</p>
+
+									<div class="res-box-footer">
+										<span class="res-tag">MIT App Inventor</span>
+										<span class="res-tag">System Design</span>
+										<span class="res-tag">Projects</span>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
+
+            <div class="res-cert">
+                <button id="view-certificates-btn">View Certificates</button>
+            </div>
+
+            <!-- Certificates Modal -->
+            <div id="certificates-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <div class="modal-header">
+                        <h2>Certifications</h2>
+                        <p>A collection of certifications earned through continuous learning and professional development.</p>
+                    </div>
+                    <div class="modal-body">
+                        <div class="certificates-grid">
+                            <!-- Certificate items will be loaded from the certificates-data div -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Data Container -->
+        <div id="certificates-data" style="display: none;">
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/Cryptalk.png</div>
+                <div class="certificate-title">Cryptalk</div>
+            </div>
             
-            <h2>Jeff Axel P. Orig</h2>
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/AVR Assembly Language.png</div>
+                <div class="certificate-title">AVR Assembly Language</div>
+            </div>
             
-            <hr></hr>
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/Computer Optimazation and Workshop.jpg</div>
+                <div class="certificate-title">Computer Optimazation and Workshop</div>
+            </div>
             
-            <p style="text-align: justify; text-indent: 20px;">Thank you for visiting my website, Hope you'll have a time to knowing me and in return may we meet in the future.</p>
-            <hr></hr>
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/EVLaunch.jpg</div>
+                <div class="certificate-title">EVLaunch</div>
+            </div>
+            
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/Programmaton.jpg</div>
+                <div class="certificate-title">Programmaton</div>
+            </div>
+            
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/Sumobot 2nd Placer.jpg</div>
+                <div class="certificate-title">Sumobot 2nd Placer</div>
+            </div>
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/Sumobot seminar.png</div>
+                <div class="certificate-title">Sumobot seminar</div>
+            </div>
+            
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/SUMOBOT.png</div>
+                <div class="certificate-title">Sumobot Participation</div>
+            </div>
+            
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/HOCKEYBOT.png</div>
+                <div class="certificate-title">Hockeybot Participation</div>
+            </div>
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/The Power of Project Management.png</div>
+                <div class="certificate-title">The Power of Project Management.</div>
+            </div>
+            
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/Enchancing Software Development.jpg</div>
+                <div class="certificate-title">Enchancing Software Development</div>
+            </div>
+            
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/ICPEP.png</div>
+                <div class="certificate-title">AI and Prompt Engineering in Education Settings</div>
+            </div>
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/PCB Seminar Workshop.png</div>
+                <div class="certificate-title">PCB Seminar Workshop</div>
+            </div>
+            
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/Portfolio Workshop.png</div>
+                <div class="certificate-title">Portfolio Workshop</div>
+            </div>
+            
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/Matlab.png</div>
+                <div class="certificate-title">Matlab</div>
+            </div>
+            
+            <div class="certificate-item">
+                <div class="certificate-image">images/certificates/Psite.png</div>
+                <div class="certificate-title">Psite</div>
+            </div>
+			
+			<div class="certificate-item">
+                <div class="certificate-image">images/certificates/Himamat.jpg</div>
+                <div class="certificate-title">Himamat</div>
+            </div>
+			
+			<div class="certificate-item">
+                <div class="certificate-image">images/certificates/Low-Level Control Programming Using Assembly language.png</div>
+                <div class="certificate-title">Low-Level Control Programming Using Assembly language</div>
+            </div>
+			
+			<div class="certificate-item">
+                <div class="certificate-image">images/certificates/Psite_2.png</div>
+                <div class="certificate-title">Psite</div>
+            </div>
+			
+			<div class="certificate-item">
+                <div class="certificate-image">images/certificates/Roboseum.png</div>
+                <div class="certificate-title">Roboseum</div>
+            </div>
+			
+			<div class="certificate-item">
+                <div class="certificate-image">images/certificates/Compfesta.png</div>
+                <div class="certificate-title">Compfesta</div>
+            </div>
+			
+			<div class="certificate-item">
+                <div class="certificate-image">images/certificates/Compesa Attendance.jpg</div>
+                <div class="certificate-title">Compesa Attendance</div>
+            </div>
+			
+			<div class="certificate-item">
+                <div class="certificate-image">images/certificates/PCB Building.jpg</div>
+                <div class="certificate-title">PCB Building</div>
+            </div>
+			
+			<div class="certificate-item">
+                <div class="certificate-image">images/certificates/Roboseum Sustainable Engineer.jpg</div>
+                <div class="certificate-title">Roboseum Sustainable Engineer</div>
+            </div>
+			
+			<div class="certificate-item">
+                <div class="certificate-image">images/certificates/Hour of AI.jpg</div>
+                <div class="certificate-title">Hour of AI</div>
+            </div>
+			
+			<div class="certificate-item">
+                <div class="certificate-image">images/certificates/Hour of Code.jpg</div>
+                <div class="certificate-title">Hour of Code</div>
+            </div>
+			
+			<div class="certificate-item">
+                <div class="certificate-image">images/certificates/The Hour of AI.jpg</div>
+                <div class="certificate-title">The Hour of AI</div>
+            </div>
+			
+			<div class="certificate-item">
+                <div class="certificate-image">images/certificates/AIReady.png</div>
+                <div class="certificate-title">AIReady</div>
+            </div>
+        </div>
+        
+        <!------PROJECT------->
+        <section class="panel" id="projects">
+            <h1 class="pre-title">Projects</h1>
+            <p class="pre-context">Showcasing my creative work and technical expertise</p>
 
-            <article>
-                <h2><b>The Importance of Computer Engineering in Today's Society</b></h2>
-                    
-                    <div id="slider-container">
-        <div id="slider">
-            <div class="slide"><img src="image/first.jpeg" alt="Slide 1"></div>
-            <div class="slide"><img src="image/second.jpeg" alt="Slide 2"></div>
-            <div class="slide"><img src="image/third.jpeg" alt="Slide 3"></div>
-            <!-- Add more slides as needed -->
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="app">App Dev</button>
+				<button class="filter-btn" data-filter="soft">Soft Dev</button>
+                <button class="filter-btn" data-filter="iot">IoT</button>
+            </div>
+
+            <div class="projects-container">
+                <div class="projects-grid">
+					<!-- Project 8 (no video) -->
+                    <div class="project-card" data-category="soft" data-project="preemtive-scheduler">
+                        <div class="project-image">
+                            <img src="images/project/oscalculator.png" alt="OS Preemptive Scheduler Calculator">
+                            <div class="project-overlay">
+                                <div class="project-preview">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title">OS Preemptive Scheduler Calculator</h2>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div>
+					<!-- Project 7 (no video) -->
+                    <div class="project-card" data-category="iot" data-project="smart-locker-system">
+                        <div class="project-image">
+                            <img src="images/project/lockersystem.png" alt="Smart Locker System">
+                            <div class="project-overlay">
+                                <div class="project-preview">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title">Smart Locker System</h2>
+                            <div class="project-tech">
+                                <span class="tech-tag">ESP32</span>
+                                <span class="tech-tag">HTML</span>
+								<span class="tech-tag">CSS</span>
+								<span class="tech-tag">JS</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div>
+                    <!-- Project 6 (with video) -->
+                    <div class="project-card" data-category="iot" data-project="sumobot-hockeybot" data-video="https://www.youtube.com/embed/boDXiyqJlZY?si=jTHrVtcP8Oz9SGEq">
+                        <div class="project-image">
+                            <iframe src="https://www.youtube.com/embed/boDXiyqJlZY?si=jTHrVtcP8Oz9SGEq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <img src="images/project/Sumobot.jpg" alt="Smart Home System">
+                            <div class="project-overlay">
+                                <div class="project-preview">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span>Watch Demo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title">Sumobot/Hockeybot Project</h2>
+                            <div class="project-tech">
+                                <span class="tech-tag">Arduino</span>
+								<span class="tech-tag">IoT</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div>
+					<!-- Project 5 (with video) -->
+                    <div class="project-card" data-category="soft" data-project="numerical-method-python" data-video="https://www.youtube.com/embed/7r_Y714Rm6I?si=Fjio3DS6GzMN-Jm9">
+                        <div class="project-image">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/7r_Y714Rm6I?si=Fjio3DS6GzMN-Jm9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <img src="images/project/NumericalPython.jpg" alt="Numerical Method Python">
+                            <div class="project-overlay">
+                                <div class="project-preview">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span>Watch Demo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title">Numerical Method Python</h2>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div> 
+					<!-- Project 4 (with video) -->
+					<div class="project-card" data-category="soft" data-project="numerical-method-matlab" data-video="https://www.youtube.com/embed/3z_P8rZJvrk?si=ngbwCjOgGY9uugI">
+                        <div class="project-image">
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/3z_P8rZJvrk?si=ngbwCjOgGY9uugIo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <img src="images/project/NumericalMatlab.jpg" alt="Numerical Method Matlab">
+                            <div class="project-overlay">
+                                <div class="project-preview">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span>Watch Demo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title">Numerical Method Matlab</h2>
+                            <div class="project-tech">
+                                <span class="tech-tag">Matlab</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div> 
+                    <!-- Project 3 (no video) -->
+                    <div class="project-card" data-category="web" data-project="portfolio-website">
+                        <div class="project-image">
+                            <img src="images/project/Portfolio.png" alt="Portfolio Website">
+                            <div class="project-overlay">
+                                <div class="project-preview">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title">Portfolio Website</h2>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+								<span class="tech-tag">JS</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div>
+                    <!-- Project 2 (with video) -->
+                    <div class="project-card" data-category="app" data-project="parking-system-app" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                        <div class="project-image">
+                            <img src="images/project/ParkingSystem.png" alt="Parking System App">
+                            <div class="project-overlay">
+                                <div class="project-preview">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span>Watch Demo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title">Parking System App</h2>
+                            <div class="project-tech">
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">RFID</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div>
+                    <!-- Project 1 (no video) -->
+                    <div class="project-card" data-category="web" data-project="attendance-system">
+                        <div class="project-image">
+                            <img src="images/project/Attendance System.png" alt="Attendance System">
+                            <div class="project-overlay">
+                                <div class="project-preview">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title">Attendance System</h2>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">HTML</span>
+								<span class="tech-tag">CSS</span>
+								<span class="tech-tag">JS</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div>
+					<!-- Project 2 (with video) -->
+                    <div class="project-card" data-category="web" data-project="queen-bee-detector" data-video="https://www.youtube.com/watch?v=94-nMEqaBZ8">
+                        <div class="project-image">
+                            <img src="images/project/queenbee.png" alt="Queen Bee Detection">
+                            <div class="project-overlay">
+                                <div class="project-preview">
+                                    <i class="fas fa-play-circle"></i>
+                                    <span>Watch Demo</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title">Queen Bee Detector</h2>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">HTML</span>
+								<span class="tech-tag">CSS</span>
+								<span class="tech-tag">JS</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div>
+					<!-- Project 1 (no video) -->
+                    <div class="project-card" data-category="web" data-project="binary-tree">
+                        <div class="project-image">
+                            <img src="images/project/binarytree.png" alt="Binary Tree">
+                            <div class="project-overlay">
+                                <div class="project-preview">
+                                    <i class="fas fa-info-circle"></i>
+                                    <span>View Details</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h2 class="project-title">Binary Tree Visualizer</h2>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+								<span class="tech-tag">CSS</span>
+								<span class="tech-tag">JS</span>
+                            </div>
+                            <button class="view-project-btn">View Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Modal -->
+            <div id="project-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <div class="modal-body">
+                        <!-- Content will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================= -->
+        <!-- PROJECT DATA - STORED IN HTML DIVS -->
+        <!-- ============================================================= -->
+        <div id="project-data-container" style="display: none;">
+			<!-- Binary Tree Visualizer -->
+			<div id="binary-tree" class="project-data">
+				<h2>Binary Tree Visualizer</h2>
+
+				<div class="project-description">
+					A web-based binary tree visualization tool developed using HTML, CSS, and JavaScript. The application allows users to create, insert, and visualize binary tree structures interactively while demonstrating how nodes are connected and traversed in real time.
+				</div>
+
+				<div class="project-technologies">
+					<span>HTML</span>
+					<span>CSS</span>
+					<span>JavaScript</span>
+					<span>Data Structures</span>
+					<span>Visualization</span>
+				</div>
+
+				<div class="project-features">
+					<ul>
+						<li>Interactive binary tree node insertion and visualization</li>
+						<li>Real-time rendering of parent and child node connections</li>
+						<li>Supports tree traversal demonstrations such as Inorder, Preorder, and Postorder</li>
+						<li>Dynamic tree updates using JavaScript DOM manipulation</li>
+						<li>User-friendly interface for learning binary tree structures</li>
+					</ul>
+				</div>
+
+				<div class="project-challenges">
+					One of the main challenges was dynamically positioning tree nodes and maintaining proper spacing as the tree structure expanded. Implementing traversal visualizations while keeping the animations synchronized with the tree logic also required careful JavaScript handling.
+				</div>
+
+				<div class="project-outcome">
+					The project successfully demonstrated binary tree concepts through interactive visualization and real-time traversal animations. It serves as an educational tool for understanding tree structures, node relationships, and traversal algorithms using web technologies.
+				</div>
+
+				<!--<div class="project-links">
+					<a href="#" class="github-link"></a>
+				</div>-->
+			</div>
+			<!-- Smart Locker System -->
+			<div id="smart-locker-system" class="project-data">
+				<h2>Smart Locker System</h2>
+
+				<div class="project-description">
+					A smart locker system developed using ESP32 and web technologies that allows users to securely lock and unlock lockers through a web-based interface. The system integrates hardware control with a responsive frontend for real-time locker monitoring and access management.
+				</div>
+
+				<div class="project-technologies">
+					<span>ESP32</span>
+					<span>HTML</span>
+					<span>CSS</span>
+					<span>JavaScript</span>
+					<span>IoT</span>
+					<span>Wi-Fi Communication</span>
+				</div>
+
+				<div class="project-features">
+					<ul>
+						<li>Web-based locker control interface using HTML, CSS, and JavaScript</li>
+						<li>ESP32-powered wireless communication for remote access</li>
+						<li>Real-time lock and unlock functionality</li>
+						<li>Responsive and user-friendly dashboard design</li>
+						<li>Secure access system for managing locker states</li>
+						<li>Integration between hardware components and web application</li>
+					</ul>
+				</div>
+
+				<div class="project-challenges">
+					One of the main challenges was establishing stable communication between the ESP32 and the web interface while ensuring fast response times during lock and unlock operations. Synchronizing hardware actions with frontend updates also required careful handling of real-time events and system states.
+				</div>
+
+				<div class="project-outcome">
+					The project successfully demonstrated an IoT-based smart locker system capable of wireless control and real-time monitoring. It showcases the integration of embedded systems and web development technologies to create a practical and secure automation solution.
+				</div>
+
+				<!--<div class="project-links">
+					<a href="#" class="github-link"></a>
+				</div> -->
+			</div>
+			<!-- OS Scheduler Calculator -->
+			<div id="preemtive-scheduler" class="project-data">
+				<h2>OS Preemptive Scheduler Calculator</h2>
+
+				<div class="project-description">
+					A Python-based operating system scheduler calculator that simulates and analyzes preemptive CPU scheduling algorithms. The application computes scheduling results and visually animates process execution, allowing users to better understand how different algorithms manage CPU time.
+				</div>
+
+				<div class="project-technologies">
+					<span>Python</span>
+					<span>OS Scheduling</span>
+					<span>Algorithm Simulation</span>
+					<span>Visualization</span>
+				</div>
+
+				<div class="project-features">
+					<ul>
+						<li>Supports preemptive scheduling algorithms: SRTF, Priority, and Round Robin</li>
+						<li>Automatic calculation of waiting time, turnaround time, and completion time</li>
+						<li>Animated visualization of process execution timeline</li>
+						<li>Play and pause controls to step through scheduling results</li>
+						<li>User-friendly input for defining processes and scheduling parameters</li>
+					</ul>
+				</div>
+
+				<div class="project-challenges">
+					Designing accurate preemptive scheduling logic required careful handling of context switching, time slicing, and priority changes. Translating calculated results into a clear and intuitive animation was also challenging, especially for maintaining synchronization between logic and visualization.
+				</div>
+
+				<div class="project-outcome">
+					The project successfully demonstrated key operating system scheduling concepts through both computation and visualization. It serves as an effective educational tool for understanding how different preemptive algorithms affect CPU performance and process behavior.
+				</div>
+
+				<!-- <div class="project-links">
+					<a href="https://github.com/046289/PREEMPTIVE_SCHEDULER" class="github-link"></a>
+				</div> -->
+			</div>
+			<!-- Queen Bee Detector -->
+			<div id="queen-bee-detector" class="project-data">
+				<h2>Queen Bee Detection Web Application</h2>
+
+				<div class="project-description">
+					A real-time AI-powered web application designed to detect queen bees using computer vision and deep learning. The system utilizes YOLOv8 object detection integrated with a Flask-based website to analyze live camera feeds and uploaded images.
+				</div>
+
+				<div class="project-technologies">
+					<span>Python</span>
+					<span>Flask</span>
+					<span>YOLOv8</span>
+					<span>OpenCV</span>
+					<span>Roboflow</span>
+				</div>
+
+				<div class="project-features">
+					<ul>
+						<li>Real-time queen bee detection using live webcam streaming</li>
+						<li>Image upload detection with automatic object recognition</li>
+						<li>YOLOv8 AI model integration for accurate detection</li>
+						<li>Bounding box visualization with confidence scores</li>
+						<li>Live detection count display on the web interface</li>
+					</ul>
+				</div>
+
+				<div class="project-challenges">
+					One of the main challenges was training the YOLOv8 model to accurately detect queen bees under different lighting conditions, angles, and image qualities. Another challenge was implementing real-time frame streaming between OpenCV, Flask, and the browser while maintaining smooth performance.
+				</div>
+
+				<div class="project-outcome">
+					The project successfully delivered a functional AI-based queen bee detection system capable of processing live video feeds and uploaded images in real time. It demonstrated the integration of deep learning, computer vision, and web technologies into a practical monitoring application.
+				</div>
+
+				<!-- <div class="project-links">
+					<a href="#" class="github-link"></a>
+				</div> -->
+			</div> 	
+            <!-- Smart Home System 6-->	
+            <div id="sumobot-hockeybot" class="project-data">
+                <h2>Sumobot/Hockeybot</h2>
+                <div class="project-description">
+                    A multifunctional robot capable of operating in both autonomous sumo mode and Bluetooth-controlled hockey mode. The bot uses sensors for opponent detection and edge avoidance, while offering real-time control via a mobile app for competitive and interactive gameplay.
+                </div>
+                <div class="project-technologies">
+                    <span>Arduino</span>
+                    <span>IoT</span>
+                    <span>App Controller</span>
+                    <span>Sensors</span>
+                </div>
+                <div class="project-features">
+                    <ul>
+                        <li>Dual-mode functionality: autonomous sumo and Bluetooth-controlled hockey</li>
+						<li>Real-time remote control via mobile app</li>
+						<li>Obstacle and opponent detection using IR/ultrasonic sensors</li>
+						<li>Edge detection for sumo ring boundary avoidance</li>
+						<li>Quick-response motor control for fast and agile movement</li>
+                    </ul>
+                </div>
+                <div class="project-challenges">
+                    Developing dual functionality for autonomous sumo mode and Bluetooth-controlled hockey mode was complex, requiring precise motor control, sensor calibration, and reliable wireless communication under fast-paced conditions.
+                </div>
+                <div class="project-outcome">
+                    The bot performed well in both modes, demonstrating accurate object detection, smooth remote control, and responsive movement. It served as a successful integration of robotics, sensor systems, and real-time user interaction.
+                </div>
+                <!-- <div class="project-links">
+                    <a href="https://github.com/046289/Sumobot-Hockeybot" class="github-link"></a>
+                </div> -->
+            </div>
+			<!-- NumericalPython 5 -->
+            <div id="numerical-method-python" class="project-data">
+                <h2>Numerical Method Python</h2>
+                <div class="project-description">
+                    A Python-based application for solving equations using numerical methods like Incremental Search, Bisection, False Position, Newton-Raphson, and Secant, with visual graphing and detailed step-by-step results.
+				</div>
+                <div class="project-technologies">
+					<span>Python</span>
+                </div>
+                <div class="project-features">
+					<ul>
+						<li>Supports multiple numerical methods: Incremental, Bisection, False Position, Newton-Raphson, and Secant</li>
+						<li>Interactive graph plotting with equation visualization</li>
+						<li>Step-by-step iteration results with error tracking</li>
+						<li>Dynamic input of custom equations using a user-friendly interface</li>
+						<li>Dark mode support and zoomable, pannable graph display</li>
+					</ul>
+				</div>
+                <div class="project-challenges">
+                    Implementing multiple algorithms with accurate error handling, dynamic function parsing, and visual graph plotting was complex, especially while maintaining a clean and responsive GUI.
+				</div>
+                <div class="project-outcome">
+                    The project successfully provided a user-friendly tool for solving equations numerically, with clear visualizations, detailed step-by-step results, and support for various root-finding methods.
+				</div>
+                <!-- <div class="project-links">
+                    <a href="https://github.com/046289/NumericalMethodPython" class="github-link"></a>
+                </div> -->
+            </div>
+			<!-- NumericalPython 4 -->
+            <div id="numerical-method-matlab" class="project-data">
+                <h2>Numerical Method Matlab</h2>
+                <div class="project-description">
+                    A MATLAB-based tool for solving equations using numerical methods like Incremental Search, Bisection, False Position, Newton-Raphson, and Secant, with graphical plots and detailed iterative results.
+				</div>
+                <div class="project-technologies">
+                    <span>Matlab</span>
+                </div>
+                <div class="project-features">
+					<ul>
+						<li>Implements core numerical methods: Incremental, Bisection, False Position, Newton-Raphson, and Secant</li>
+						<li>Graphical plotting of functions and root approximations</li>
+						<li>Tabular display of iterations with error analysis</li>
+						<li>Supports symbolic and numeric input for flexible function entry</li>
+						<li>Compact and clear GUI using MATLAB's built-in tools (optional)</li>
+                    </ul>
+                </div>
+                <div class="project-challenges">
+                    Handling symbolic and numeric input, maintaining numerical precision across methods, and creating clear visualizations of the root-finding process in MATLAB presented several technical challenges.
+				</div>
+                <div class="project-outcome">
+                    The MATLAB project effectively provided a reliable and educational tool for applying numerical methods, with accurate results, insightful visualizations, and a user-friendly interface for students and researchers.
+				</div>
+                <!-- <div class="project-links">
+                    <a href="https://github.com/046289/NumericalMethodMatlab" class="github-link"></a>
+                </div> -->
+            </div>
+            <!-- Portfolio Website 3 -->
+            <div id="portfolio-website" class="project-data">
+                <h2>Portfolio Website</h2>
+                <div class="project-description">
+                    A responsive personal website built with modern web technologies and best practices for performance. The site showcases my projects, skills, and professional experience.
+                </div>
+                <div class="project-technologies">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>Responsive Design</span>
+                    <span>CSS Grid/Flexbox</span>
+                </div>
+                <div class="project-features">
+                    <ul>
+                        <li>Responsive design that works on all devices</li>
+                        <li>Dark/light mode toggle</li>
+                        <li>Project showcase with filtering options</li>
+                        <li>Contact form with validation</li>
+                        <li>Performance optimized with lazy loading and code splitting</li>
+                    </ul>
+                </div>
+                <div class="project-challenges">
+                    Creating a design that stands out while maintaining excellent performance metrics was challenging. I focused on optimizing images and implementing efficient animations.
+                </div>
+                <div class="project-outcome">
+                    The website achieved a 95+ score on Google PageSpeed Insights and has received positive feedback from recruiters.
+                </div>
+                <!-- <div class="project-links">
+                    <a href="https://github.com/username/portfolio" class="github-link"></a>
+                </div> -->
+            </div>
+            <!-- Parking System App 2 -->
+            <div id="parking-system-app" class="project-data">
+                <h2>Parking System App</h2>
+                <div class="project-description">
+                    A desktop application with RFID integration for managing parking spaces and user access control. The system handles vehicle entry/exit, payment processing, and space allocation.
+                </div>
+                <div class="project-technologies">
+                    <span>C#</span>
+                    <span>.NET Framework</span>
+                    <span>RFID Technology</span>
+                    <span>SQL Server</span>
+                    <span>WPF</span>
+                </div>
+                <div class="project-features">
+                    <ul>
+                        <li>RFID-based vehicle identification</li>
+                        <li>Automated billing based on parking duration</li>
+                        <li>Real-time parking space availability monitoring</li>
+                        <li>User management with different access levels</li>
+                        <li>Reporting and analytics dashboard</li>
+                    </ul>
+                </div>
+                <div class="project-challenges">
+                    Integrating the RFID hardware with the software and ensuring reliable reads under various conditions was particularly challenging.
+                </div>
+                <div class="project-outcome">
+                    The system was implemented in a commercial parking lot, reducing entry/exit times by 70% and improving overall customer satisfaction.
+                </div>
+                <!-- <div class="project-links">
+                    <a href="https://github.com/username/parking-system" class="github-link"></a>
+                </div> -->
+            </div>
+            <!-- Attendance System 1 -->
+            <div id="attendance-system" class="project-data">
+                <h2>Attendance System</h2>
+                <div class="project-description">
+                    A cross-platform mobile app for tracking attendance, managing schedules, and generating reports with data visualization. The app helps organizations monitor presence, improve punctuality, and streamline record-keeping.
+                </div>
+                <div class="project-technologies">
+                    <span>Xxamp</span>
+					<span>Apache Tomcat</span>
+                </div>
+                <div class="project-features">
+                    <ul>
+                        <li>Real-time attendance tracking with check-in/check-out options</li>
+						<li>Customizable schedules management</li>
+						<li>Attendance analytics with visual reports</li>
+						<li>Automated notifications and punctuality alerts</li>
+						<li>Role-based access and administrative controls</li>
+                    </ul>
+                </div>
+                <div class="project-challenges">
+                    The main challenges included ensuring cross-platform compatibility, implementing real-time attendance syncing, securing sensitive data, and designing a user-friendly interface that worked well for both administrators and users.
+                </div>
+                <div class="project-outcome">
+					The app successfully delivered accurate attendance tracking, simplified report generation, improved user engagement, and provided a scalable solution that enhanced overall efficiency and accountability.
+                </div>
+                <!-- <div class="project-links">
+                    <a href="https://github.com/username/fitness-tracker" class="github-link"></a>
+                </div> -->
+            </div>
         </div>
 
-        <div id="dots-container"></div>
-    </div>
-
-    <script>
-        const slider = document.getElementById('slider');
-        const dotsContainer = document.getElementById('dots-container');
-        let slideIndex = 0;
-
-        function nextSlide() {
-            slideIndex = (slideIndex + 1) % slider.children.length;
-            updateSlider();
-        }
-
-        function prevSlide() {
-            slideIndex = (slideIndex - 1 + slider.children.length) % slider.children.length;
-            updateSlider();
-        }
-
-        function updateSlider() {
-            slider.style.transform = `translateX(${-slideIndex * 100}%)`;
-            updateDots();
-        }
-
-        function updateDots() {
-            const dots = document.querySelectorAll('.dot');
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active-dot', index === slideIndex);
-            });
-        }
-
-        // Create dots based on the number of slides
-        for (let i = 0; i < slider.children.length; i++) {
-            const dot = document.createElement('div');
-            dot.classList.add('dot');
-            dot.addEventListener('click', () => {
-                slideIndex = i;
-                updateSlider();
-            });
-            dotsContainer.appendChild(dot);
-        }
-
-        // Auto slide every 3 seconds (adjust as needed)
-        setInterval(nextSlide, 3000);
-    </script>    
-    
-                <h4>What is computer engineering?</h4>
-                <p style="text-align: justify; text-indent: 20px;">Computer engineering is an immensely dynamic and multifaceted domain that ingeniously merges fundamental tenets of computer science and electrical engineering to conceptualize and actualize cutting-edge computer systems meticulously. This encompasses an extensive <s>gamot</s> of tasks, from the intricate design of computer hardware and software to the ingenious development of complex networks and communication frameworks. Computer engineers ardently dedicate themselves to a vast array of projects, ranging from <del>from</del> the creation of pioneering computer technologies to the relentless enhancement of existing systems.</p>
-            </article>
+        <section class="panel" id="contact">
+            <h1 class="pre-title">Contact</h1>
+            <p class="pre-context">Get in touch if you'd like to know more.</p>
             
-            <p style="text-align: right;"><small><cite>Source:<a href="https://www.fieldengineer.com/article/the-importance-of-computer-engineering-in-todays-society/" style="color: #FFFFFF;">Field Engineer</a></cite></small></p>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-image" style="background-image: url('images/contact.jpg');"></div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Location</h3>
+                                <p>M. Pamaong Stanai, Bry. Cogon, Tagbilaran City</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>axeljep26@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+63 981 600 0811</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/046289" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/jeffaxelorig" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm" action="#" method="post">
+                        <div class="input-group">
+                            <div class="form-field">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                <span class="input-focus"></span>
+                            </div>
+                            
+                            <div class="form-field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                <span class="input-focus"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <span class="input-focus"></span>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                            <span class="input-focus"></span>
+                        </div>
+                        
+                        <div class="submit-container">
+                            <button type="submit" class="submit-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            <span class="submit-message" id="submitMessage"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Jeff Axel Orig</h3>
+                    <p>Portfolio & Resume</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#resume">Resume</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/046289" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
             
-            <hr></hr>
-         <small>
-            <address>
-            <p>Orig, Jeff Axel P.<br>Pamaong Stanai Rd., Brgy. Cogon<br>Tagbilaran City, 6300</p>
-        </address>   
-        </small>
-        </aside>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Jeff Axel Orig. All Rights Reserved.</p>
+            </div>
+        </footer>
         
-        <main>
-            <h2>Welcome to my page</h2>
-            <hr></hr>
-            <p>This is a brief introduction to my personal website. Feel free to explore!</p>
+        <script type="text/javascript">
+            // Active section indicator
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll("header .menu li a");
 
-<figure>
-            <embed src="image/cat.jpg" type="image/jpg" width="610" height="680" controls>
+            window.addEventListener("scroll", () => {
+                let current = "";
 
-<figcaption>                
-    <small>
-            This photo was generated by ai feel to visit their site.<br>
-            <sub>
-                <cite>Source: 
-                    <a href="https://www.freepik.com/premium-ai-image/cute-domestic-cat-staring-camera-generative-ai_63002425.htm" style="color: black;">Freepik</a>
-                </cite>
-            </sub>
-    </small>
-</figcaption>
-</figure>
+                // Check which section is in viewport
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    if (pageYOffset >= sectionTop - 50) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                // Remove 'active' class from all links and add it to the current section's link
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${current}`) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+
+            // Smooth toggle menu
+            const burgerMenu = document.getElementById("burgerMenu");
+            const menu = document.getElementById("menu");
+            const checkbox = document.getElementById("check");
+
+            burgerMenu.addEventListener("click", () => {
+                const isMobile = window.innerWidth <= 1086; // Check if it's a mobile screen
+
+                if (isMobile) {
+                    // Mobile: Toggle height animation
+                    if (menu.style.height && menu.style.height !== "0px") {
+                        // Close menu
+                        menu.style.height = "0px";
+                        menu.addEventListener(
+                            "transitionend",
+                            () => {
+                                menu.style.display = "none";
+                            },
+                            { once: true }
+                        );
+                    } else {
+                        // Open menu
+                        menu.style.display = "flex";
+                        const fullHeight = menu.scrollHeight + "px"; // Get full height
+                        menu.style.height = "0px"; // Start from 0
+                        setTimeout(() => {
+                            menu.style.height = fullHeight; // Animate to full height
+                        }, 0);
+                    }
+                } else {
+                    // Desktop: No height transition, just toggle the display
+                    menu.classList.toggle("show");
+                }
+            });
+
+            // Close the menu when a link is clicked (on mobile)
+            navLinks.forEach((link) => {
+                link.addEventListener("click", () => {
+                    if (window.innerWidth <= 1086) {
+                        // Mobile: Close the menu with animation
+                        menu.style.height = "0px";
+                        menu.addEventListener(
+                            "transitionend",
+                            () => {
+                                menu.style.display = "none";
+                            },
+                            { once: true }
+                        );
+                    }
+                });
+            });
+
+            // Reset menu display when screen is resized
+            window.addEventListener("resize", () => {
+                if (window.innerWidth > 1086) {
+                    // On desktop (screen width > 580px), ensure the menu is visible and not animated
+                    menu.style.display = "flex";
+                    menu.style.height = "auto"; // Reset height for larger screens
+                } else {
+                    // On mobile (screen width <= 580px), ensure height transition is applied
+                    menu.style.display = "none";
+                    menu.style.height = "0px";
+                }
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                // Resume tabs functionality
+                const resumeTabs = document.querySelectorAll('.resume-tab');
+                const tabContents = document.querySelectorAll('.tab-content');
+
+                resumeTabs.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        // Remove active class from all tabs and contents
+                        resumeTabs.forEach(t => t.classList.remove('active'));
+                        tabContents.forEach(c => c.classList.remove('active'));
+
+                        // Add active class to clicked tab
+                        tab.classList.add('active');
+
+                        // Show corresponding content
+                        const tabId = tab.getAttribute('data-tab');
+                        document.getElementById(`${tabId}-content`).classList.add('active');
+                    });
+                });
+
+                // Certificates modal functionality
+                const certificatesBtn = document.getElementById('view-certificates-btn');
+                const certificatesModal = document.getElementById('certificates-modal');
+                const closeModal = certificatesModal.querySelector('.close-modal');
+                const certificatesGrid = certificatesModal.querySelector('.certificates-grid');
+                const certificatesData = document.getElementById('certificates-data');
+
+                // Load certificates into modal - SIMPLIFIED VERSION
+                function loadCertificates() {
+                    certificatesGrid.innerHTML = '';
+                    const certificateItems = certificatesData.querySelectorAll('.certificate-item');
+
+                    certificateItems.forEach(item => {
+                        const image = item.querySelector('.certificate-image').textContent;
+                        const title = item.querySelector('.certificate-title').textContent;
+
+                        const certificateCard = document.createElement('div');
+                        certificateCard.className = 'certificate-card';
+                        certificateCard.innerHTML = `
+                            <div class="certificate-card-image">
+                                <img src="${image}" alt="${title}">
+                            </div>
+                            <div class="certificate-card-content">
+                                <h3>${title}</h3>
+                            </div>
+                        `;
+
+                        certificatesGrid.appendChild(certificateCard);
+                    });
+                }
+
+                // Open modal when certificates button is clicked
+                certificatesBtn.addEventListener('click', () => {
+                    loadCertificates();
+                    certificatesModal.classList.add('show');
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+                });
+
+                // Close modal when clicking the close button
+                closeModal.addEventListener('click', () => {
+                    closeCertificatesModal();
+                });
+
+                // Close modal when clicking outside the modal content
+                window.addEventListener('click', (event) => {
+                    if (event.target === certificatesModal) {
+                        closeCertificatesModal();
+                    }
+                });
+
+                // Close modal when pressing Escape key
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape' && certificatesModal.classList.contains('show')) {
+                        closeCertificatesModal();
+                    }
+                });
+
+                function closeCertificatesModal() {
+                    certificatesModal.classList.remove('show');
+                    document.body.style.overflow = ''; // Restore scrolling
+                }
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                // Project filtering functionality
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                const projectCards = document.querySelectorAll('.project-card');
+
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove active class from all buttons
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                        // Add active class to clicked button
+                        button.classList.add('active');
+
+                        // Get filter value
+                        const filterValue = button.getAttribute('data-filter');
+
+                        // Filter projects
+                        projectCards.forEach(card => {
+                            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                                card.style.display = 'block';
+                                setTimeout(() => {
+                                    card.classList.add('show');
+                                }, 50);
+                            } else {
+                                card.classList.remove('show');
+                                setTimeout(() => {
+                                    card.style.display = 'none';
+                                }, 300);
+                            }
+                        });
+                    });
+                });
+
+                // Initialize with all projects visible
+                projectCards.forEach(card => {
+                    card.classList.add('show');
+                });
+
+                // Modal functionality
+                const modal = document.getElementById('project-modal');
+                const modalBody = modal.querySelector('.modal-body');
+                const closeModal = modal.querySelector('.close-modal');
+
+                // Open modal when a project card is clicked
+                projectCards.forEach(card => {
+                    const viewButton = card.querySelector('.view-project-btn');
+                    viewButton.addEventListener('click', () => {
+                        const projectId = card.getAttribute('data-project');
+                        const projectDataElement = document.getElementById(projectId);
+                        const videoUrl = card.getAttribute('data-video');
+
+                        if (!projectDataElement) {
+                            console.error('Project data not found for:', projectId);
+                            return;
+                        }
+
+                        // Build modal content
+                        let modalContent = '';
+
+                        // Add video if available
+                        if (videoUrl) {
+                            modalContent += `
+                                <div class="modal-video-container">
+                                    <iframe 
+                                        width="100%" 
+                                        height="400" 
+                                        src="${videoUrl}" 
+                                        title="${projectDataElement.querySelector('h2').textContent}" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            `;
+                        }
+
+                        // Get project data from HTML
+                        const title = projectDataElement.querySelector('h2').textContent;
+                        const description = projectDataElement.querySelector('.project-description').innerHTML;
+                        const technologies = Array.from(projectDataElement.querySelectorAll('.project-technologies span')).map(span => span.textContent);
+                        const features = projectDataElement.querySelector('.project-features').innerHTML;
+                        const challenges = projectDataElement.querySelector('.project-challenges').innerHTML;
+                        const outcome = projectDataElement.querySelector('.project-outcome').innerHTML;
+                        const githubLink = projectDataElement.querySelector('.github-link')?.getAttribute('href') || '#';
+                        const demoLink = projectDataElement.querySelector('.demo-link')?.getAttribute('href') || null;
+
+                        // Add project details
+                        modalContent += `
+                            <div class="modal-project-details">
+                                <h2>${title}</h2>
+                                <p class="project-description">${description}</p>
+
+                                <div class="project-section">
+                                    <h3>Technologies Used</h3>
+                                    <div class="tech-tags">
+                                        ${technologies.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                                    </div>
+                                </div>
+
+                                <div class="project-section">
+                                    <h3>Key Features</h3>
+                                    ${features}
+                                </div>
+
+                                <div class="project-section">
+                                    <h3>Challenges</h3>
+                                    <p>${challenges}</p>
+                                </div>
+
+                                <div class="project-section">
+                                    <h3>Outcome</h3>
+                                    <p>${outcome}</p>
+                                </div>
+
+                                <div class="project-links">
+                                    <a href="${githubLink}" target="_blank" class="project-link">
+                                        <i class="fab fa-github"></i> View Code
+                                    </a>
+                                    ${demoLink ? 
+                                        `<a href="${demoLink}" target="_blank" class="project-link">
+                                            <i class="fas fa-external-link-alt"></i> Live Demo
+                                        </a>` : ''}
+                                </div>
+                            </div>
+                        `;
+
+                        // Set modal content
+                        modalBody.innerHTML = modalContent;
+
+                        // Show modal
+                        modal.classList.add('show');
+                        document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+                    });
+                });
+
+                // Close modal when clicking the close button
+                closeModal.addEventListener('click', () => {
+                    closeProjectModal();
+                });
+
+                // Close modal when clicking outside the modal content
+                window.addEventListener('click', (event) => {
+                    if (event.target === modal) {
+                        closeProjectModal();
+                    }
+                });
+
+                // Close modal when pressing Escape key
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape' && modal.classList.contains('show')) {
+                        closeProjectModal();
+                    }
+                });
+
+                function closeProjectModal() {
+                    modal.classList.remove('show');
+                    document.body.style.overflow = ''; // Restore scrolling
+
+                    // Stop video if playing
+                    const iframe = modalBody.querySelector('iframe');
+                    if (iframe) {
+                        const iframeSrc = iframe.src;
+                        iframe.src = iframeSrc; // Reload iframe to stop video
+                    }
+                }
+            });
             
-            <article>
-                <h3>Fun Facts About Cats</h3>
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+          
+            // Form submission handling
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
                 
-                <hr></hr>
+                const submitMessage = document.getElementById('submitMessage');
+                const submitBtn = document.querySelector('.submit-btn');
                 
-                <quote><p style="text-align: justify;"><dfn>Cats can dream</dfn>, just like people do. They have a fascinating ability to enter a dream state during their sleep.</p></quote>
+                // Simulate form submission (replace with actual form submission)
+                submitBtn.classList.add('loading');
+                submitBtn.disabled = true;
                 
-                <p style="text-align: right;"><cite><sub>Source: <a href="https://petpros.net/15-fun-facts-about-cats/" target="_blank" rel="noopener noreferrer" style="color: #FFFFFF;">Pet Pros</a></sub></cite></p>
-                
-            
-            <p style="text-align: justify; text-indent: 20px;">Like cats <i>dreaming</i>, I also have big dreams. Just as they nap with <b>visions</b>, I envision myself as a <em>successful</em> person one day. In the world of <i>computer engineering</i>, I'm working hard to turn those dreams into reality. It's like solving puzzles and building cool stuff with technology, paving my way to a bright future.</p>
-            
-            <hr></hr>
-            
-            <!-- Example of using abbr for abbreviation with title -->
-            <p><abbr title="Bachelor of Science">BSCOMPe</abbr> in Computer Engineering</p>
-            
-        </main>
-    </section>
-
-    <footer>
-        <mark>Home</mark>
-    </footer>
-
-</body>
-</html>
-
+                setTimeout(() => {
+                    submitBtn.classList.remove('loading');
+                    submitBtn.classList.add('success');
+                    submitMessage.textContent = "Message sent successfully!";
+                    submitMessage.classList.add('success');
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    // Reset button after delay
+                    setTimeout(() => {
+                        submitBtn.classList.remove('success');
+                        submitBtn.disabled = false;
+                        submitMessage.textContent = "";
+                        submitMessage.classList.remove('success');
+                    }, 3000);
+                }, 1500);
+            });
+        </script>
+    </body>
 </html>
